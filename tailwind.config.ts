@@ -70,7 +70,10 @@ export default {
 				'tripro-light-blue': '#3b82f6',
 				'tripro-dark': '#1e293b',
 				'tripro-gray': '#64748b',
-				'tripro-light-gray': '#f1f5f9'
+				'tripro-light-gray': '#f1f5f9',
+				'tripro-green': 'hsl(var(--tripro-green))',
+				'tripro-orange': 'hsl(var(--tripro-orange))',
+				'tripro-light-blue-new': 'hsl(var(--tripro-light-blue))'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
