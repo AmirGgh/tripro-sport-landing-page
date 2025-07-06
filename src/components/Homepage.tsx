@@ -136,34 +136,35 @@ const Homepage = () => {
       
       {/* Hero Section */}
       <section className="relative overflow-hidden">
-        <div className="hero-gradient dark:hero-gradient-dark min-h-screen flex items-center justify-center relative">
-          <div 
-            className="absolute inset-0 opacity-20 dark:opacity-10"
-            style={{
-              backgroundImage: `url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=2000&q=80')`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-            }}
-          />
-          <div className="container mx-auto px-6 text-center relative z-10">
-            <h1 className="hero-title text-5xl md:text-7xl font-bold text-white mb-6 opacity-0 brand-text">
-              TRIPRO
-            </h1>
-            <p className="hero-title text-2xl md:text-3xl text-white/90 mb-4 opacity-0">
-              המערכת שתשדרג את הקבוצה שלך
-            </p>
-            <p className="hero-subtitle text-xl md:text-2xl text-white/80 mb-12 max-w-3xl mx-auto opacity-0">
-              תוכניות אימון, נוכחות, תוצאות ותשלומים – הכל במקום אחד
-            </p>
-            <Button 
-              className="hero-cta cta-button text-lg opacity-0"
-              onClick={() => window.open('https://app.triprosystem.com', '_blank')}
-            >
-              כניסה לאפליקציה ←
-            </Button>
-          </div>
-        </div>
-      </section>
+  <div className="hero-gradient dark:hero-gradient-dark h-[33vh] md:min-h-screen flex items-center justify-center relative">
+    <div 
+      className="absolute inset-0 opacity-40 dark:opacity-20"
+      style={{
+        backgroundImage: `url('/images/main_p.png')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
+    />
+    <div className="container mx-auto px-6 text-center relative z-10">
+      <h1 className="hero-title text-3xl md:text-7xl font-bold text-white mb-4 md:mb-6 opacity-0 brand-text">
+        TRIPRO
+      </h1>
+      <p className="hero-title text-xl md:text-3xl text-white/90 mb-2 md:mb-4 opacity-0">
+        המערכת שתשדרג את הקבוצה שלך
+      </p>
+      <p className="hero-subtitle text-base md:text-2xl text-white/80 mb-6 md:mb-12 max-w-3xl mx-auto opacity-0">
+        תוכניות אימון, נוכחות, תוצאות ותשלומים – הכל במקום אחד
+      </p>
+      <Button 
+        className="hero-cta cta-button text-sm md:text-lg opacity-0"
+        onClick={() => window.open('https://app.triprosystem.com', '_blank')}
+      >
+        כניסה לאפליקציה ←
+      </Button>
+    </div>
+  </div>
+</section>
+
 
       {/* Features Section */}
       <section className="py-20 bg-muted/30">
@@ -202,36 +203,12 @@ const Homepage = () => {
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="phone-mockup opacity-0">
-              <div className="relative mx-auto w-80 h-[600px] bg-foreground rounded-[3rem] p-4 shadow-2xl">
-                <div className="w-full h-full bg-background rounded-[2.5rem] overflow-hidden">
-                  <div className="hero-gradient h-20 flex items-center justify-center">
-                    <span className="text-white font-bold text-xl brand-text">TRIPRO</span>
-                  </div>
-                  <div className="p-6 space-y-4">
-                    <div className="flex items-center justify-between p-4 bg-muted/50 rounded-lg">
-                      <span className="font-medium text-foreground">אימון השבוע</span>
-                      <Badge className="bg-tripro-green text-white">5 משתתפים</Badge>
-                    </div>
-                    <div className="space-y-2">
-                      <div className="h-3 bg-muted rounded-full">
-                        <div className="h-3 bg-tripro-orange rounded-full w-3/4"></div>
-                      </div>
-                      <span className="text-sm text-muted-foreground">התקדמות: 75%</span>
-                    </div>
-                    <div className="grid grid-cols-2 gap-4">
-                      <div className="p-4 bg-tripro-light-blue-new/10 rounded-lg text-center">
-                        <Activity className="w-6 h-6 text-tripro-light-blue-new mx-auto mb-2" />
-                        <span className="text-sm font-medium text-foreground">תוצאות</span>
-                      </div>
-                      <div className="p-4 bg-tripro-green/10 rounded-lg text-center">
-                        <Users className="w-6 h-6 text-tripro-green mx-auto mb-2" />
-                        <span className="text-sm font-medium text-foreground">נוכחות</span>
-                      </div>
-                    </div>
-                  </div>
+                    <img
+                      src="/images/phonPC.svg"
+                      alt="תצוגת אפליקציה"
+                      className="w-full h-full object-contain"
+                    />
                 </div>
-              </div>
-            </div>
             
             <div>
               <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
@@ -262,45 +239,37 @@ const Homepage = () => {
       </section>
 
       {/* Sports Images Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-6">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground text-center mb-16">
-            לכל סוגי הספורט
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="relative group overflow-hidden rounded-xl">
-              <img 
-                src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80"
-                alt="טריאתלון - ריצה"
-                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-tripro-green/80 to-transparent flex items-end">
-                <h3 className="text-white font-bold text-xl p-6">ריצה וטריאתלון</h3>
-              </div>
-            </div>
-            <div className="relative group overflow-hidden rounded-xl">
-              <img 
-                src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80"
-                alt="שחייה"
-                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-tripro-light-blue-new/80 to-transparent flex items-end">
-                <h3 className="text-white font-bold text-xl p-6">שחייה</h3>
-              </div>
-            </div>
-            <div className="relative group overflow-hidden rounded-xl">
-              <img 
-                src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?auto=format&fit=crop&w=800&q=80"
-                alt="רכיבה על אופניים"
-                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-tripro-orange/80 to-transparent flex items-end">
-                <h3 className="text-white font-bold text-xl p-6">רכיבה על אופניים</h3>
-              </div>
-            </div>
+     <section className="py-20 bg-muted/30">
+  <div className="container mx-auto px-6">
+    <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-12">
+      לכל סוגי הספורט
+    </h2>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      {[
+        { title: "טריאתלון", img: "/images/triathlon.jpg", bg: "from-tripro-blue/80" },
+        { title: "ריצה", img: "/images/run.jpg", bg: "from-tripro-green/60" },
+        { title: "שחייה", img: "/images/swim.jpg", bg: "from-tripro-light-blue-new/60" },
+        { title: "רכיבה על אופניים", img: "/images/bike.jpg", bg: "from-tripro-orange/60" },
+      ].map((sport, index) => (
+        <div
+          key={index}
+          className="relative group overflow-hidden rounded-xl"
+        >
+          <img
+            src={sport.img}
+            alt={sport.title}
+            className="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <div className={`absolute inset-0 bg-gradient-to-t ${sport.bg} to-transparent flex items-end`}>
+            <h3 className="text-white font-bold text-sm md:text-base p-3">{sport.title}</h3>
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* Testimonial Section */}
       <section className="py-20 bg-background">

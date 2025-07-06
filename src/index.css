@@ -46,10 +46,12 @@
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
 
-    /* TRIPRO Brand Colors */
-    --tripro-green: 142 76% 36%;
-    --tripro-orange: 24 95% 53%;
-    --tripro-light-blue: 199 89% 48%;
+/* TRIPRO Brand Colors */
+--tripro-green: 142 76% 36%;
+--tripro-orange: 24 95% 53%;
+--tripro-light-blue: 199 89% 48%;
+--tripro-navy: 220 36% 18%; /* צבע רביעי */
+
   }
 
   .dark {
